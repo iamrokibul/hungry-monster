@@ -12,7 +12,7 @@ function searchMeal(e) {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        resultHeading.innerHTML = `<h2>Search results for '${term}':</h2>`;
+        resultHeading.innerHTML = `<h2>Search results for <span class="search-keywords">'${term}'</span></h2>`;
         if (data.meals === null) {
           resultHeading.innerHTML = `<p>There are no search results. Try again!</p>`;
         } else {
